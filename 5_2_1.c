@@ -149,7 +149,7 @@ CT encrypt(SET set, element_t M, element_t Sc_set[], element_t Sc_set_size){
   }
   element_init_G1(ct.C[0], pairing);
   element_pow_zn(ct.C[0], set.pp.g, ct.s);
-  size_t+= element_length_in_bytes(ct.C[0]);
+  size_ct+= element_length_in_bytes(ct.C[0]);
   for(int i=1; i<= set.pp.n; i++){
     element_init_G1(ct.C[i], pairing);
     if(arr[i] == true){
